@@ -1,0 +1,375 @@
+
+
+
+
+
+/* 201e1f-ff4000-faaa8d-feefdd-50b2c0 */
+
+
+
+.bg-alpha{
+    background: rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+/* Section Caousel */
+.carousel-item img {
+    height: 500px; /* ปรับความสูงของภาพ */
+    object-fit: cover; /* ทำให้ภาพเต็มพื้นที่ */
+}
+
+
+/* Section Blog */
+/* .warpper-card-img {
+    position: relative;
+    width: auto;
+    height: 350px;
+    padding-top: 56.25%;
+    /* 16:9 Aspect Ratio */
+    /* overflow: hidden;
+}
+.warpper-card-img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 2s ease-in-out; 
+    /* เพิ่ม transition */
+/* }  */
+
+
+.warpper-card-img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9; /* สมัยใหม่ ใช้แทน padding-top ได้ */
+    overflow: hidden;
+}
+
+.warpper-card-img img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 2s ease-in-out;
+}
+
+
+
+/* //////////////////////////// */
+
+.btn-group-custom button{
+    margin-bottom: 0.5rem;
+    width: 100px;
+
+}
+
+.blog-image{
+    padding: 200px 0px 120px;
+    text-align: center;
+    color:#fff;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.blog-content{
+    padding: 50px 100px;
+    box-shadow: 0px 0px 10px #a5a5aa;
+
+}
+
+/* แก้ปัญหา card ไม่เท่ากัน */
+.row .card {
+    height: 500;
+    
+}
+
+@media screen {
+    
+}
+
+
+/* การ์ดให้เท่ากัน */
+/* .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+.card-body {
+    display: flex;
+    flex-direction: column;
+}
+.card-text {
+    flex-grow: 1;
+    max-height: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+} */
+
+.card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+.card-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.card-text {
+    flex-grow: 1;
+    max-height: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.card-body a.btn {
+    margin-top: auto;
+}
+
+
+/* การ์ดที่อยู่ภายใต้ owl ถึงจะทำงาน ถ้าเขียน  css แบบนี้ */
+/* .owl-carousel .card-body{
+    height: 150px;
+    overflow: hidden;
+
+} */
+
+@media (max-width: 991px){
+    .blog-content{
+        padding: 40px 50px;
+    }
+}
+
+@media (max-width: 768px){
+    .blog-content{
+        padding: 20px 30px;
+    }
+}
+
+
+.warpper-card-img:hover img {
+    transform: scale(1.1); /* ขยายภาพเมื่อ hover */
+}
+
+
+.text-center {
+    text-align: center; /* จัดให้อยู่กึ่งกลาง */
+}
+
+.border-short-bottom {
+    display: inline-block;
+    border-bottom: 3px solid black; /* เส้นขีดใต้ */
+    padding-bottom: 5px; /* เว้นระยะห่างระหว่างข้อความกับเส้น */
+}
+
+
+
+
+/* Section Footer */
+.semi-footer{
+    background-color: #8d8d8d;
+}
+
+.semi-footer li.active a{
+    color: #ffffff;
+}
+.semi-footer h4{
+    color: #00bbff;
+    border-bottom: 1px solid;
+    padding:10px 0;
+}
+
+.footer {
+    background-color: #000000;
+    color: white;
+    font-size: 0.7rem;
+    height: 90px;
+    line-height: 90px; /* ใช้ได้ถ้ามีเพียงบรรทัดเดียว */
+    text-align: center; /* จัดให้อยู่กลางแนวนอน */
+}
+
+
+#navbar{
+    padding: 5px;
+    transition: 0.5s;
+    
+}
+
+/* page-title */
+.page-title{
+    position: relative;
+    display: block;
+    padding-top: 250px;
+    padding-bottom: 100px;
+    color: aliceblue;
+}
+
+
+/* Section Timeline */
+
+.timeline {
+    list-style: none;
+    position: relative;
+    padding: 20px 0;
+}
+
+.timeline>li {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.timeline::before {
+    position: absolute;
+    content: " ";
+    width: 2px;
+    background: #e6e6e6;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+}
+
+li>.timeline-badge {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border: 3px solid #84ba3f;
+    left: 50%;
+    margin-left: -9px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 0 0 5px #fff;
+    top: 15px;
+}
+
+li>.timeline-badge::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    width: 25px;
+    height: 2px;
+    background: #e6e6e6;
+}
+
+li.inverted>.timeline-badge::before {
+    right: -32px;
+}
+
+li>.timeline-badge p {
+    width: 200px;
+    margin-top: -9px;
+    margin-left: 25px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+li.inverted>.timeline-badge p {
+    float: right;
+    text-align: right;
+    margin-right: 25px;
+}
+
+li>.timeline-card {
+    position: relative;
+    width: 46%;
+    float: left;
+    text-align: right;
+    padding: 0 10px;
+}
+
+li.inverted>.timeline-card {
+    float: right;
+    text-align: left;
+}
+
+.timeline>li::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.timeline-arrow {
+    width: 100%;
+    text-align: center;
+    bottom: -70px;
+    color: #e6e6e6;
+}
+
+@media (max-width: 768px) {
+    .timeline::before,
+    .timeline-badge {
+        left: 40px !important;
+    }
+    .timeline-badge::before {
+        right: -32px !important;
+    }
+    .timeline-badge p,
+    li.inverted>.timeline-badge p {
+        margin-left: 50px !important;
+        text-align: left;
+        float: left;
+    }
+    li>.timeline-card {
+        width: 100%;
+        text-align: left;
+        padding: 37px 0 0 85px;
+    }
+    .timeline-arrow {
+        text-align: left;
+        left: 0;
+    }
+    .timeline-arrow {
+        padding-left: 32px;
+    }
+}
+
+/* star 
+
+☆★
+*/
+
+.star-rating{
+    position: relative;
+    font-size: 2em;
+    color: gold;
+    display: inline-block;
+}
+
+.star-current{
+    position: absolute;
+    top: 0;
+    width: 20%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+
+/* section on to top */
+.to-top{
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+    width: 40px;
+    height: 40px;
+    background-color: #03f2ff;
+    color: white;
+    z-index: 9999;
+    border-radius: 50%;
+    font-size: 25px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.to-top:hover{
+    color: #000000;
+    background-color: #1065e4;
+}
+
